@@ -26,10 +26,10 @@ body {
   position: absolute;
   bottom: 0;
   background-color: #F5F5F5;
-  height: 60px;
+  height: 80px;
   width: 100%;
   text-align: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 
 }

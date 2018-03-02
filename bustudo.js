@@ -117,4 +117,4 @@ setInterval(function(){
 
   first_load = false;
   });
-}, 500);
+}, 1000);
