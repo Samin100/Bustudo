@@ -15,6 +15,8 @@ body {
         width: 100%;
         margin-top: 25px;
         margin-bottom: 20px;
+        border-top: 2px solid #F0F0F0;
+        border-bottom: 2px solid #F0F0F0;
 }
 
 #bus-count {
@@ -25,11 +27,10 @@ body {
 .footer {
   position: absolute;
   bottom: 0;
-  background-color: #F5F5F5;
+  background-color: #F6F6F6;
   height: 80px;
   width: 100%;
   text-align: center;
   padding-top: 20px;
-  padding-bottom: 30px;
 
 }

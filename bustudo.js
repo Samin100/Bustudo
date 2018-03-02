@@ -39,6 +39,12 @@ setInterval(function(){
     // the API response data
     buses = response.vehicle;
 
+    // no buses
+    if (!buses) {
+      $('#bus-count').text(0);
+      return;
+    }
+
     // looping through every bus from the API call
     for (i = 0; i < buses.length; i++) {
 
