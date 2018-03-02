@@ -1,4 +1,7 @@
-# Bustudo Bus Tracking &nbsp;&nbsp; <img src="buses.svg", height=100>
+# Bustudo Bus Tracking
+
+![bus_emoji](https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/118/bus_1f68c.png)
+
 This is a frontend that interfaces with the <a href="umd.io">umd.io</a> API
 and displays a live view of all University of Maryland buses. This was inspired
 by Uber's <b>God Mode</b>, an internal tool that showed all ongoing Uber rides
