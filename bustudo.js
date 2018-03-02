@@ -1,33 +1,20 @@
-var map = {};
+/*
 
+This JS file renders the Google Map via the Google map API,
+fetches bus locations from umd.io, and places markers on the
+map.
+
+*/
+
+
+// global vars
+var map = {};
 var map_rendered = false;
 var markersArray = {};
 var curr_buses = {};
 var image;
-var first_load = true;
 
-
-function createTable(tableData) {
-  var table = document.createElement('table');
-  var tableBody = document.createElement('tbody');
-
-  tableData.forEach(function(rowData) {
-    var row = document.createElement('tr');
-
-    rowData.forEach(function(cellData) {
-      var cell = document.createElement('td');
-      cell.appendChild(document.createTextNode(cellData));
-      row.appendChild(cell);
-    });
-
-    tableBody.appendChild(row);
-  });
-
-  table.appendChild(tableBody);
-  document.body.appendChild(table);
-}
-
-
+// initializes the Google Map
 function initMap() {
   var umd = {lat: 38.9869, lng: -76.9426 };
   map = new google.maps.Map(document.getElementById('map'), {
@@ -45,7 +32,7 @@ function initMap() {
 
 }
 
-
+// updates the Google Map with bus objects drawn onto it
 setInterval(function(){
   $.get("http://api.umd.io/v0/bus/locations", function(response) {
 
@@ -87,10 +74,10 @@ setInterval(function(){
 
         // updating the curr_buses dictionary
         curr_buses[bus_obj['id']] = JSON.stringify(bus_obj)
-        console.log('\n\nupdating bus #', bus_obj['id'])
-        console.log(Object.keys(curr_buses).length)
-        $('#update').text('Just updated bus #' + bus_obj['id']);
+
+        // updating the bus count
         $('#bus-count').text(Object.keys(curr_buses).length);
+
         // removing the bus marker from the map
         // first we check if it exists
         // if it doesn't, then this is probably the first load of the map
@@ -114,7 +101,5 @@ setInterval(function(){
 
   }
 
-
-  first_load = false;
   });
-}, 1000);
+}, 1000); // updates every 1 second
