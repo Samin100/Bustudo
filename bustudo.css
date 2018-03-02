@@ -1,0 +1,35 @@
+html, body {
+    height: 100%;
+
+}
+
+body {
+    font-family: 'Proxima Nova', Georgia, sans-serif;
+    padding-top: 25px;
+
+
+}
+
+#map {
+        height: 60%;
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 20px;
+}
+
+#bus-count {
+  font-weight: 600;
+  color: #1BB350;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #F5F5F5;
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+}
